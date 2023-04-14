@@ -1,20 +1,13 @@
 #ifndef _INSTRUCTION_H_
 #define _INSTRUCTION_H_
-
+#include<iostream>
+using std::string;
 string _j(string ins);
 string _jal(string ins);
-string _addi(string ins);
-string _addiu(string ins);
-string _andi(string ins);
-string _ori(string ins);
-string _xori(string ins);
+string convertTypeI(string ins,string name);
 string _lui(string ins);
 string _lw(string ins);
 string _sw(string ins);
-string _beq(string ins);
-string _bne(string ins);
-string _slti(string ins);
-string _sltiu(string ins);
 
 /* This part is to be written by lhz. */
 string _add(string ins);

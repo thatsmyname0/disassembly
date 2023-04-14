@@ -1,8 +1,6 @@
 #include"mips.h"
 #include"utils.h"
 #include"instruction.h"
-#include<string>
-#include<vector>
 #include<fstream>
 using std::fstream;
 
@@ -44,18 +42,18 @@ string MIPS::convertToAssembly(string ins)
     {
         switch(opcode)
         {
-            case 1000:return _addi(ins);
-            case 1001:return _addiu(ins);
-            case 1100:return _andi(ins);
-            case 1101:return _ori(ins);
-            case 1110:return _xori(ins);
+            case 1000:return convertTypeI(ins,"addi");
+            case 1001:return convertTypeI(ins,"addiu");
+            case 1100:return convertTypeI(ins,"andi");
+            case 1101:return convertTypeI(ins,"ori");
+            case 1110:return convertTypeI(ins,"xori");
             case 1111:return _lui(ins);
             case 100011:return _lw(ins);
             case 101011:return _sw(ins);
-            case 100:return _beq(ins);
-            case 101:return _bne(ins);
-            case 1010:return _slti(ins);
-            case 1011:return _sltiu(ins);
+            case 100:return convertTypeI(ins,"beq");
+            case 101:return convertTypeI(ins,"bne");
+            case 1010:return convertTypeI(ins,"slti");
+            case 1011:return convertTypeI(ins,"sltiu");
             default:assert(0);
         }
     }
