@@ -10,7 +10,7 @@ string MIPS::convertToAssembly(string ins)
         assert(0);
     char type=getInsType(ins);
     int opcode=stoi(ins.substr(0,6));
-    if('R'==type)
+    /*if('R'==type)
     {   
         int func=getInsFunc(ins);
         switch (func)
@@ -31,7 +31,7 @@ string MIPS::convertToAssembly(string ins)
             default:assert(0);
         }
     }
-    else if('J'==type)
+    else */if('J'==type)
     {
         if(10==opcode)
             return _j(ins);

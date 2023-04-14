@@ -14,7 +14,7 @@ string convertTypeI(string ins,string name)
     int rs=getRs(ins);
     int rt=getRt(ins);
     int imm=getImmediate(ins);
-    return name+string(" $")+std::to_string(rs)+string(",$")+std::to_string(rt)+string(",")+std::to_string(imm);
+    return name+string(" $")+std::to_string(rt)+string(",$")+std::to_string(rs)+string(",")+std::to_string(imm);
     
 }
 string _lui(string ins)

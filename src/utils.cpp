@@ -9,7 +9,7 @@ void assert(bool check)
         exit(1);
     }
 }
-inline char getInsType(string ins)
+char getInsType(string ins)
 {
     assert(32==ins.size());
     string opcode=ins.substr(0,6);
@@ -18,24 +18,24 @@ inline char getInsType(string ins)
     return std::stoi(opcode)<=11?'J':'I';
 }
 
-inline int getInsFunc(string ins)
+int getInsFunc(string ins)
 {
     return std::stoi(ins.substr(26,6));
 }
 
-inline int binaryStringToDecimal(string str)
+int binaryStringToDecimal(string str)
 {
     return std::stoi(str,0,2);
 }
-inline int getRs(string ins)
+int getRs(string ins)
 {
     return binaryStringToDecimal(ins.substr(6,5));
 }
-inline int getRt(string ins)
+int getRt(string ins)
 {
     return binaryStringToDecimal(ins.substr(11,5));
 }
-inline int getImmediate(string ins)
+int getImmediate(string ins)
 {
     return binaryStringToDecimal(ins.substr(16,16));
 }
