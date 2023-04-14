@@ -11,5 +11,9 @@ Cmake -G"MinGW Makefiles" ..
 cmake --build .
 .\test
 ```
-
++ 或者在test目录下使用以下命令启动测试
+```
+g++ -o test test.cpp ../src/mips.cpp ../src/instruction.cpp ../src/utils.cpp
+.\test
+```
 + 突然发现没有对immediate为负数时的处理, 如果汇编组写了针对负数的处理的话我就再补充上吧
