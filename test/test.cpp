@@ -58,4 +58,6 @@ TEST_CASE("Testing all instructions"){
     CHECK((new MIPS)->convertToAssembly("00000000000000010001000000000000")==string("sll $2,$1,0"));
     MESSAGE("Testing srl");
     CHECK((new MIPS)->convertToAssembly("00000000000000010001000000000010")==string("srl $2,$1,0"));
+    MESSAGE("Testing jr");
+    CHECK((new MIPS)->convertToAssembly("00000000010000000000000000001000")==string("jr $2"));
 }

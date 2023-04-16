@@ -8,7 +8,7 @@
 + 没有对immediate为负时的处理, 因为没看见别人有写, 如果需要我再加上
 
 # 测试
-+ 测试写了对自己指令的简单测试, 在build目录中执行以下命令即可启动测试
++ 测试写了对全部27条指令的测试, 在build目录中执行以下命令即可启动测试
 ```cmake
 Cmake -G"MinGW Makefiles" ..
 cmake --build .
